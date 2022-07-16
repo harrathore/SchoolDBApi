@@ -1,0 +1,61 @@
+Database Design and Model Class in JavaScript
+
+1) Student 
+     a) rollno    - NUmber
+     b) name      - String
+     c) age       - Number
+     d) semester  - Number
+     e) branch    - String
+
+2) Tecacher 
+    a) id         - Number
+    b) name       - String
+    c) age        - Number
+    4) subjects ; - [Strings]
+
+
+
+Connectioning to databse -- Local Database(localhost:27017)
+
+Project Structure
+   app.js 
+   routes 
+      - Students
+      - Techers
+   Controllers 
+       - SudentController
+       - TeacherController
+   Model 
+      - Techer
+      - Student
+
+
+Api Calls :
+
+1) Students
+     a) All
+     b) Single
+        - get
+        - post
+        - put
+        - delete
+
+2) Teachers 
+     a) All 
+     b) Single 
+        - get
+        - post
+        - put 
+        - delete
+
+
+
+
+
+
+Package Requireents :
+1) Express
+2) mongoose
+3) router
+4) nodemon 
+5) dotenv
