@@ -1,4 +1,4 @@
-const express = require('express')
+const express = require('express');
 const TeacherModel = require('../DBModels/TeacherModel')
 
 
@@ -20,4 +20,14 @@ async function createTeacher(req, res){
         res.status(401).json({message : error.message});
     }
 }
-module.exports = {getAll, createTeacher};
+
+async function getATeacher(req, res){
+    const id = req.params.id;
+    try{
+        const teacherData = await TeacherModel.findById(id);
+        res.status(200).json(teacherData);
+    }catch(error){
+        res.status(400).json({message : error.message});
+    }
+}
+module.exports = {getAll, createTeacher, getATeacher};
